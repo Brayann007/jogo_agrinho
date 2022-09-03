@@ -1,0 +1,440 @@
+/*Importações e Regras*/
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
+
+/*GLOBAL */
+
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+* ::selection{
+	background-color: #474F59;
+	color: #AEB5BF;
+}
+
+/*CABEÇALHO E FONTES*/
+
+header{
+	position: relative;
+	height: 7vh;
+	width: 100%;
+	background-color: #AEB5BF;
+}
+
+.menu{
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	top: 2vh;
+	font-size: 20px;
+}
+
+.help{
+	background-color: #474F59;
+	color: white;
+	border: none;
+	border-radius: 20px;
+	padding:  0.5%;
+}
+
+
+.help:hover{
+	transition-duration: 700ms;
+	background-color: #AEB5BF;
+	color: black;
+	border: none;
+}
+
+/*FUNDO E MAPA*/
+
+.fundo{
+	position: absolute;
+	width: 100%;
+	height: 93vh;
+}
+
+.fumaça{
+	position: absolute;
+	width: 100%;
+	height: 92.4vh;
+}
+
+ .jogo{
+ 	position: relative;
+	width: 100%;
+	height: 92.4vh;
+	background-repeat: no-repeat;
+ }
+
+.mapa_jogo{
+	position: absolute;
+	opacity: 90%;
+	top: 10vh;
+	left: 35vh;
+	width: 75%;
+	height: 75vh;
+	border-radius: 10px;
+	border: 1px solid #F2E2CE;
+}
+
+/*Area de ajuda*/
+
+.tela_ajuda{
+	display: none;
+	position: relative;
+	top: 5%;
+	left: 33%;
+	width: 50%;
+	height: 79%;
+	background-color: #D9D4CC;
+	opacity: 95%;
+	font-size: 20px;
+	border-radius: 5px;
+}
+
+.tela_ajuda2{
+	display: none;
+	position: relative;
+	top: 25vh;
+	left: 70vh;
+	width: 50%;
+	height: 40vh;
+	background-color: #D9D4CC;
+	opacity: 95%;
+	font-size: 20px;
+	border-radius: 5px;
+}
+
+.title_ajuda{
+	text-align: center;
+}
+
+ul{
+	list-style: none;
+}
+
+li{
+	line-height: 50px;
+}
+
+.voltar{
+	position: absolute;
+	right: 0;
+	border: none;
+	background-color: #474F59;
+	padding: 10px;
+	color: black;
+	border-radius: 20vh;
+}
+
+.voltar:hover{
+	position: absolute;
+	right: 0;
+	border: none;
+	background-color: red;
+	padding: 10px;
+	color: black;
+}
+
+.avançar{
+	position: absolute;
+	background-color: #AEB4BE;
+	bottom: 2vh;
+	width: 15vh;
+	height: 3vh;
+	left: 43vh;
+	border: none;
+}
+
+.avançar:hover{
+	border: none;
+	background-color: black;
+	color: white;
+	transition-duration: 800ms;
+	border-radius: 30px;
+}
+
+.aterro_escrita{
+	position: absolute;
+	bottom: 15vh;
+	left: 47vh;
+}
+
+.caminhão_escrita{
+	position: absolute;
+	bottom: 15vh;
+	right: 10vh;
+}
+
+.reciclagem_escrita{
+	position: absolute;
+	bottom: 15vh;
+	left: 5vh;
+}
+
+.legenda_aterro{
+	position: absolute;
+	top: 10vh;
+	left: 47vh;
+}
+
+.legenda_reciclagem{
+	position: absolute;
+	top: 10vh;
+	left: 8vh;
+}
+
+.legenda_caminhão{
+	position: absolute;
+	top: 15vh;
+	right: 14vh;
+}
+
+/*ESTILO DO CAMINHÃO*/
+
+#caminhao{
+	position: absolute;
+	width: 2.5%;
+	height: 2vh;
+	bottom: 15%;
+	left: 54vh;
+	border: 1px solid black;
+	border-left: 2px dashed yellow;
+}
+
+
+/*BOTÕES DE DESTINO*/
+
+.botao_reciclagem{
+	position: fixed;
+	height: 20%;
+	width: 11%;
+	bottom: 17.5%;
+	right: 8%;
+	border: none;
+	background: none;
+}
+
+.botao_reciclagem:hover{
+	opacity: 60%;
+	border: 1px solid white;
+	transition-duration: 800ms;
+}
+
+.botão_aterro{
+	position: fixed;
+	width: 14.5%;
+	height: 11%;
+	top: 18%;
+	left: 38.5%;
+	background: none;
+	border: none;
+}
+
+.botão_aterro:hover{
+	opacity: 40%;
+	border: 1px solid white;
+	transition-duration: 800ms;
+}
+
+/*CAÇAMBA*/
+
+.div_caçamba{
+	display: flex;
+	position: absolute;
+	border-radius: 10px;
+	width: 30vh;
+	height: 80%;
+	top: 10vh;
+	left: 3vh;
+	background-color: #C8CCCF;
+	color: #000000;
+	display: none;
+	opacity: 80%;
+	font-size: 15px;
+	grid-column-gap: 10px;
+}
+
+.botão_caçamba{
+	border-radius: 10px;
+	position: absolute;
+	width: 30vh;
+	height: 5vh;
+	background-color: #B3BBC6;
+	top: 5vh;
+	left: 3vh;
+	border: none;
+}
+
+.botão_caçamba:hover{
+	border-radius: 10px;
+	color: white;
+	border: 1px solid white;
+	opacity: 70%;
+}
+
+.esconder_caçamba{
+	border-radius: 10px;
+	position: absolute;
+	width: 30vh;
+	height: 5vh;
+	background-color: #B3BBC6;
+	top: 5vh;
+	left: 3vh;
+	border: none;
+	display: none;
+}
+
+.esconder_caçamba:hover{
+	border-radius: 10px;
+	color: white;
+	border: 1px solid white;
+	opacity: 70%;
+}
+
+
+.andando1{
+  animation: aterro 3s linear;
+}
+
+.andando2{
+  animation: reciclagem 4s linear;
+}
+
+@keyframes aterro{
+  10% {
+    bottom: 130px;
+		left: 24%;
+  }
+
+  11%{
+  	transform: rotate(90deg);
+  }
+
+  50%{
+    bottom: 70%;
+		left: 24%;
+		transform: rotate(90deg);
+  }
+
+  55%{
+  	transform: rotate(180deg);
+  }
+
+  80%{
+  	bottom: 70%;
+		left: 45%;
+		transform: rotate(180deg);
+  }
+
+  81%{
+  	transform: rotate(90deg);
+  }
+
+  100%{
+  	bottom: 78%;
+		left: 45%;
+		transform: rotate(90deg);
+  }
+
+
+}
+
+@keyframes reciclagem{
+  10% {
+  	bottom: 15%;
+	left: 25%;
+  }
+
+  11%{
+  	transform: rotate(90deg);
+  }
+
+  30%{
+   bottom: 45%;
+	left: 25%;
+	transform: rotate(90deg);
+  }
+
+  31%{
+  	transform: rotate(180deg);
+  }
+
+  60%{
+  	bottom: 45%;
+	left: 53%;
+  	transform: rotate(180deg);
+  }
+
+  61%{
+  	transform: rotate(270deg);
+  }
+
+  65%{
+  	bottom: 42%;
+	left: 53%;
+	transform: rotate(270deg);
+  }
+
+  66%{
+  	transform: rotate(180deg);
+  }
+
+  70%{
+  	bottom: 42%;
+	left: 85%;
+  	transform: rotate(180deg);
+  }
+
+  71%{
+  	transform: rotate(270deg);
+  }
+
+  75%{
+	left: 85%;
+  }
+
+  80%{
+  	bottom: 42%;
+  }
+
+  100%{
+  	bottom: 26%;
+	left: 85%;
+	transform: rotate(270deg);
+  }
+
+}
+
+/* SOM */
+
+.som_desligado{
+	background-color: white;
+	width: 2%;
+	top: 0;
+	border-radius: 5px;
+}
+
+.som_desligado:hover{
+	opacity: 50%;
+	border: 1px solid black;
+	transition-duration: 500ms;
+}
+
+.som_ligado{
+	display: none;
+	background-color: white;
+	width: 2%;
+	top: 0;
+	border-radius: 5px;
+}
+
+.som_ligado:hover{
+	opacity: 50%;
+	border: 1px solid black;
+	transition-duration: 500ms;
+}
